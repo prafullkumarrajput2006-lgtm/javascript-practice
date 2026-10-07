@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Instagram</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #fafafa;
+    }
+
+    header {
+      background-color: white;
+      padding: 15px 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .profile {
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      background-color: white;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .profile img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin-right: 20px;
+    }
+
+    .profile-info {
+      font-size: 16px;
+    }
+
+    .posts {
+      max-width: 600px;
+      margin: 20px auto;
+    }
+
+    .post {
+      background-color: white;
+      border: 1px solid #dbdbdb;
+      margin-bottom: 20px;
+      border-radius: 10px;
+    }
+
+    .post img {
+      width: 100%;
+      border-radius: 10px 10px 0 0;
+    }
+
+    .post .content {
+      padding: 10px;
+    }
+
+    .like-btn {
+      font-size: 24px;
+      cursor: pointer;
+      color: gray;
+      transition: color 0.2s;
+    }
+
+    .like-btn.liked {
+      color: red;
+    }
+
+    .caption {
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  Instagram
+</header>
+
+<div class="profile">
+  <img src="https://i.pravatar.cc/100?img=12" alt="Profile Picture">
+  <div class="profile-info">
+    <strong>username123</strong><br>
+    120 posts • 500 followers • 300 following
+  </div>
+</div>
+
+<div class="posts">
+
+  <!-- Post 1 -->
+  <div class="post">
+    <img src="https://source.unsplash.com/600x400/?nature" alt="Post Image">
+    <div class="content">
+      <span class="like-btn" onclick="toggleLike(this)">♡</span>
+      <p class="caption">Loving this view 🌄</p>
+    </div>
+  </div>
+
+  <!-- Post 2 -->
+  <div class="post">
+    <img src="https://source.unsplash.com/600x400/?food" alt="Post Image">
+    <div class="content">
+      <span class="like-btn" onclick="toggleLike(this)">♡</span>
+      <p class="caption">Yummy lunch 🍕</p>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  function toggleLike(button) {
+    button.classList.toggle("liked");
+    button.textContent = button.classList.contains("liked") ? "❤️" : "♡";
+  }
+</script>
+
+</body>
+</html>
